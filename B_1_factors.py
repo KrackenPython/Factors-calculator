@@ -1,4 +1,4 @@
-# functions go here
+# Generate headings
 def statement_generator(statement, decoration):
     print(f"\n{decoration * 5} {statement} {decoration * 5}")
 
@@ -46,7 +46,7 @@ def factor(var_to_factor):
     stop = var_to_factor ** 0.5
     stop = int(stop)
 
-    for item in range(0, stop + 1):
+    for item in range(1, stop + 1):
 
         # check to see if the item is a factor
         if to_factor % item == 0:
@@ -69,8 +69,8 @@ def factor(var_to_factor):
 statement_generator("The Ultimate Factor Finder", "-")
 
 # Display instructions if requested
-want_instructions = input("\nPress <Enter> ot read the instructions"
-                          "or press any key to continue")
+want_instructions = input("\nPress <Enter> to read the instructions "
+                          "or press any key to continue ")
 
 if want_instructions == "":
     instructions()
@@ -92,7 +92,7 @@ while True:
     # set up comment for unity
     else:
         all_factors = ""
-        comment = "One is UNITY! It only"
+        comment = "One is UNITY! It only has ONE factor!"
 
     # comments for squares / primes
 
@@ -116,5 +116,3 @@ while True:
     print(comment)
 
 print("Thank you for using the Ultimate Factor Finder.")
-
-
